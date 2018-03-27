@@ -16,12 +16,13 @@ This schedule will be used to keep track of your progress throughout the week an
 
 
 ## Project Description
-
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 
-## Wireframes
+    My game is a timed surfer-themed game where an object (the surfer) tries to avoid hitting other objects (turtles.) If the two objects collide the player gets a time penalty.  When the game ends the player is rated on a scale based on their time score. 
 
-Include images of your wireframes. 
+## Wireframes
+  ![](images/wireframe.jpg)
+
 
 ## Priority Matrix
 
@@ -31,6 +32,7 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ### Landing Page
 What will a player see when they start your game?
+    -Welcome page that asks you to choose guy/girl.
 
 ### Game Initialization
 What will a player see when the game is started? 
@@ -59,6 +61,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
+| Landing Page 1 | H | 2hrs| 0hrs | XXhrs |
+| Component 1 | H | 10hrs| 12hrs | 12hrs |
+| Component 1 | H | 10hrs| 12hrs | 12hrs |
+| Component 1 | H | 10hrs| 12hrs | 12hrs |
 | Component 1 | H | 10hrs| 12hrs | 12hrs |
 | Total |  | 10hrs| 12hrs | 12hrs |
 
