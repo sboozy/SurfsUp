@@ -27,7 +27,7 @@ This schedule will be used to keep track of your progress throughout the week an
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
 
 -obtain necessary imagery for files  
--animate the background image and creat surfer div  
+-animate the background image and create surfer div  
 -assign event listeners for keyup/keydown so that keyboard arrows can move surfer on the Y-axis  
 -create turtle divs and test for 2D-collision  
 -visually alert the user that there has been a collision  
@@ -67,7 +67,7 @@ What does it look like when the game ends, what determines winning or losing?
 
 ### Game Reset
 How will the user restart the game once it has been completed. 
-   
+
     -Reset button following end of game prompt  
 
 ## MVP 
@@ -87,9 +87,13 @@ Include the full list of features that will be part of your MVP
 
 
 Include the full list of features that you are considering for POST MVP
-## Functional Components
-
+## Functional Components  
 Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method. 
+  
+  -setInterval(); for moving background  
+  -addEventListerners() or 'on' functions for keydown on arrows;
+  -2D collision detection https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+  -math.random(); for assigning coordinates to turtles
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
 
