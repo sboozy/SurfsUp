@@ -26,61 +26,61 @@ This schedule will be used to keep track of your progress throughout the week an
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
 
--obtain necessary imagery for files
--animate the background image and creat surfer div
--assign event listeners for keyup/keydown so that keyboard arrows can move surfer on the Y-axis
--create turtle divs and test for 2D-collision 
--visually alert the user that there has been a collision
--assign positioning to turtles
--turn on/off display of positioned turtles
--use Math.random to give "turtles" random positioning (but limited so they don't fly in the sky)
--store collision events and equate to time penalty
--add end game function
--add timing function (also show timing)
--add landing page choose player option
--add audio and option to turn off
--make surfer "shimmy"
--if X amt of collisions occur, animate wave across page and pop up "GAME OVER"
+-obtain necessary imagery for files  
+-animate the background image and creat surfer div  
+-assign event listeners for keyup/keydown so that keyboard arrows can move surfer on the Y-axis  
+-create turtle divs and test for 2D-collision  
+-visually alert the user that there has been a collision  
+-assign positioning to turtles  
+-turn on/off display of positioned turtles  
+-use Math.random to give "turtles" random positioning (but limited so they don't fly in the sky)  
+-store collision events and equate to time penalty  
+-add end game function  
+-add timing function (also show timing)  
+-add landing page choose player option  
+-add audio and option to turn off  
+-make surfer "shimmy"  
+-if X amt of collisions occur, animate wave across page and pop up "GAME OVER"  
 
 ## Game Components
 
 ### Landing Page
 What will a player see when they start your game?
-    -Welcome page that asks you to choose guy/girl surfer
-    -option to listen to music 
-    -instructions on how to use up/down arrows to move surfer
+    -Welcome page that asks you to choose guy/girl surfer  
+    -option to listen to music  
+    -instructions on how to use up/down arrows to move surfer  
 
 ### Game Initialization
 What will a player see when the game is started? 
-    -A surfer on a surf board and the background with a delayed start to moving on the X-axis.
+    -A surfer on a surf board and the background with a delayed start to moving on the X-axis.  
 
 ### Playing The Game
-What will be the flow of the game, what will the user be expected to do and what will the user expect from the game.
-    -User is expected to use up and down arrows to move surfer up and down the screen to avoid collision objects (turtles).  If there is a collision there will be a visual cue that alerts the user but the game will continue on.
+What will be the flow of the game, what will the user be expected to do and what will the user expect from the game.  
+    -User is expected to use up and down arrows to move surfer up and down the screen to avoid collision objects (turtles).  If there is a collision there will be a visual cue that alerts the user but the game will continue on.  
 
 ### Winning The Game
-What does it look like when the game ends, what determines winning or losing?
-    -The game runs an allotted amt of time so when that time is up the game is up.  Any collisions add time to the total time.  The user's time total is measured against a scale which determines which of 3 messages appear to the user at the end of the game. 
+What does it look like when the game ends, what determines winning or losing?  
+    -The game runs an allotted amt of time so when that time is up the game is up.  Any collisions add time to the total time.  The user's time total is measured against a scale which determines which of 3 messages appear to the user at the end of the game.  
 
 
 ### Game Reset
-How will the user restart the game once it has been completed.
-    -Reset button following end of game prompt
+How will the user restart the game once it has been completed.  
+    -Reset button following end of game prompt  
 
 ## MVP 
-Include the full list of features that will be part of your MVP 
--landing page with choices
--game page
--moving divs
--detect and log collisions
--timer
--end game
--reset game
+Include the full list of features that will be part of your MVP  
+-landing page with choices  
+-game page  
+-moving divs  
+-detect and log collisions  
+-timer  
+-end game  
+-reset game  
 
-## POST MVP
--surfer shimmy
--multiple types of "road blocks"
--game over wave
+## POST MVP  
+-surfer shimmy  
+-multiple types of "road blocks"  
+-game over wave  
 
 
 Include the full list of features that you are considering for POST MVP
