@@ -45,26 +45,29 @@ Include a full list of features that have been prioritized based on the `Time an
 ## Game Components
 
 ### Landing Page
-What will a player see when they start your game?
+What will a player see when they start your game?  
     -Welcome page that asks you to choose guy/girl surfer  
     -option to listen to music  
     -instructions on how to use up/down arrows to move surfer  
 
 ### Game Initialization
-What will a player see when the game is started? 
+What will a player see when the game is started?  
     -A surfer on a surf board and the background with a delayed start to moving on the X-axis.  
 
 ### Playing The Game
 What will be the flow of the game, what will the user be expected to do and what will the user expect from the game.  
+      
     -User is expected to use up and down arrows to move surfer up and down the screen to avoid collision objects (turtles).  If there is a collision there will be a visual cue that alerts the user but the game will continue on.  
 
 ### Winning The Game
-What does it look like when the game ends, what determines winning or losing?  
+What does it look like when the game ends, what determines winning or losing? 
+
     -The game runs an allotted amt of time so when that time is up the game is up.  Any collisions add time to the total time.  The user's time total is measured against a scale which determines which of 3 messages appear to the user at the end of the game.  
 
 
 ### Game Reset
-How will the user restart the game once it has been completed.  
+How will the user restart the game once it has been completed. 
+   
     -Reset button following end of game prompt  
 
 ## MVP 
