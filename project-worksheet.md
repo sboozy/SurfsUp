@@ -97,12 +97,12 @@ Based on the initial logic defined in the previous game phases section try and b
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Landing Page HTML/CSS| H | 4hrs| 0hrs | XXhrs |
-| Gaming Page HTML/CSS | H | 4hrs| 0hrs | XXhrs |
-| Logic for moving background  | H | 2hrs| 0hrs | XXhrs |
-| Logic for collision and visual indicator| H | 10hrs| 0hrs | XXhrs |
+| Gaming Page HTML/CSS | H | 4hrs| 1hrs | XXhrs |
+| Logic for moving background  | H | 2hrs| 4hrs | XXhrs |
+| Logic for collision and visual indicator| H | 10hrs| 5hrs | XXhrs |
 | Logic for turtle display and location| H | 8hrs| 0hrs | XXhrs |
 | Logic for timing | H | 5hrs| 0hrs | XXhrs |
 | Logic for Game Over | H | 5hrs| 0hrs | XXhrs |

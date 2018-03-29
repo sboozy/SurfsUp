@@ -1,0 +1,42 @@
+body {
+  background-image: url("../images/wave_bg.jpg");
+  background-size: 160% 900px;
+  background-repeat: repeat-x;
+  -webkit-animation: marquee 25s;    learned marquee example from codepen https://codepen.io/mikeyroy/pen/tlFiC
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1200px;
+  }
+}
+
+.surfer {
+  height: 200px;
+  width: 100px;
+  background-color: orange;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 20%;
+
+}
+
+.turtle {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 30%;
+  animation-name: turtlemove;
+  animation-duration: 15s;
+  animation-timing-function: ease;
+}
+
+@keyframes turtlemove {
+  0% {left: 0;}
+  100% {left: -1000px;}
+}
