@@ -32,7 +32,7 @@
   /*margin-left: 50%;*/
   margin-top: 15%;  /*limits how high my turtle can start*/
   display: none;
-/*  animation-name: turtlemove;*/
+  /*animation-name: turtlemove;*/
   animation-duration: 9s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;  /*keeps div off the screen/doesn't reset)*/
@@ -41,4 +41,18 @@
 @keyframes turtlemove {
   0% {right: 0;}
   100% {right: 2000px;}
+}
+.timer {
+  background-color: blue;
+  width: 10%;
+  height: 10%;
+  position: relative;
+  text-align: center;
+
+}
+h2 {
+
+}
+h3 {
+
 }

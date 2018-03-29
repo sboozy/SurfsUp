@@ -1,93 +1,89 @@
+// eslint-env jquery
 $(document).ready(function() {
-
-function initGame () {
   let surfer = $('.surfer');
   let turtle = $('.turtle');
-  let turtleArray = [];
+  let turtlePositionArray = [];
+
+  let timer = $('')
 
 
-  function addRandomTurtles() {
-    let y = Math.floor(Math.random() * (1 + 200)); //adds random start location of turtles
-    turtleArray.push(y);
+setInterval(makeAndMoveTurtles, 4000);
+
+
+    function randomTurtles() {
+      let y = Math.floor(Math.random() * (1 + 200)); //adds random start location of turtles
+      turtlePositionArray.push(y);
   }
-
-  function moveTurtles() {
-    addRandomTurtles();
-    for (let i = 0; i < turtleArray.length; i++) {
-      turtle.css("top", turtleArray[i]);
-      turtle.css("right", -75) //starts turtle off screen
-      turtle.css("display", "block");
-      turtle.css("animation-name", "turtlemove");
+    function makeAndMoveTurtles() {
+    randomTurtles();
+    for (let i = 0; i < turtlePositionArray.length; i++) {
+      let newTurtles = $('.background-image').append('<div class="turtle"></div>');
+      $('.background-image div:last-child').css("top", turtlePositionArray[i]);
+      $('.background-image div:last-child').css("right", -75); //starts turtle off screen
+      $('.background-image div:last-child').css("display", "block");
+      $('.background-image div:last-child').css("animation-name", "turtlemove");
+      turtlePositionArray = [];
     }
   }
-  moveTurtles(); //use loop to determine how often to "launch turtles"
-}
-initGame();
+
+// makeAndMoveTurtles();
+// console.log('made 1');
 
 
+  window.setInterval(detectCollision, 200);
 
-  // let surferWidth, surferHeight, surferX, surferY,
-  //     turtleWidth, turtleHeight, turtleX, turtleY;
+  function detectCollision() {
+    let surferWidth, surferHeight, surferX, surferY,
+        turtleWidth, turtleHeight, turtleX, turtleY;
+    let turtle = $('.background-image div:last-child');
+    surferWidth = surfer.outerWidth();  //Width, Height, X & Y check of surfer's position
+    surferHeight = surfer.outerHeight();
+    surferX = surfer.offset().left;
+    surferY = surfer.offset().top;
+    turtleWidth = turtle.outerWidth(); //Width, Height, X & Y check of turtle's position
+    turtleHeight = turtle.outerHeight();
+    turtleX = turtle.offset().left;
+    turtleY = turtle.offset().top;
 
-  // function detectCollision() {
-  //   surferWidth = surfer.outerWidth();  //Width, Height, X & Y check of surfer's position
-  //   // console.log(surferWidth);
-  //   surferHeight = surfer.outerHeight();
-  //   // console.log(surferHeight);
-  //   surferX = surfer.offset().left;
-  //   // console.log(surferX);
-  //   surferY = surfer.offset().top;
-  //   // console.log(surferY);
-  //   turtleWidth = turtle.outerWidth(); //Width, Height, X & Y check of turtle's position
-  //   // console.log(turtleWidth);
-  //   turtleHeight = turtle.outerHeight();
-  //   // console.log(turtleHeight);
-  //   turtleX = turtle.offset().left;
-  //   // console.log(turtleX);
-  //   turtleY = turtle.offset().top;
+    if ((surferX + surferWidth) > (turtleX) && surferX < (turtleX + turtleWidth) &&
+        (surferY + surferHeight) > (turtleY) && surferY <(turtleY + turtleHeight)) {
+         // turtle.css("display", "none");
+         turtle.css("background", "red");
+        }
+  }
 
-  //   if ((surferX + surferWidth) > (turtleX) && surferX < (turtleX + turtleWidth) &&
-  //       (surferY + surferHeight) > (turtleY) && surferY <(turtleY + turtleHeight)) {
-  //         console.log("You have collided!");
-  //       }
-  // }
+  $('body').keydown( function(event) {
+      switch (event.which) {
+        case 38:surferUp();
+        console.log("up pressed");
+        break;
+        case 40: surferDown();
+        detectCollision();
+        break;
+        case 37:surferLeft();
+        console.log("left pressed");
+        break;
+        case 39: surferRight();
+        console.log("right pressed");
+        break;
+        default: return;
+  }
+    event.preventDefault();// stops scroll bar from moving on arrow key press
+  })
 
-  // // window.requestAnimationFrame(detectCollision);
+  function surferUp() {
+    surfer.css('top', '-=15');
+  }
 
-  //   $('body').keydown(function(event){   //looks for collision everytime you move the surfer
-  //     switch(event.which) {              //but we want to look for a collision even if we aren't
-  //     case 38:surferUp();                //moving our surfer....
-  //     console.log("up pressed");
-  //     break;
-  //     case 40: surferDown();
-  //     console.log("down pressed");
-  //     break;
-  //     case 37:surferLeft();
-  //     console.log("left pressed");
-  //     break;
-  //     case 39: surferRight();
-  //     console.log("right pressed");
-  //     break;
-  //     default: return;
-  // }
-  // event.preventDefault();// stops scroll bar from moving on arrow key press
-  // });
+  function surferDown() {
+    surfer.css('top', '+=15');
+  }
 
-  // function surferUp() {
-  //   $('.surfer').css('top', '-=15');
-  // };
+  function surferLeft() {
+    surfer.css('left', '-=15');
+  }
 
-  // function surferDown() {
-  //   $('.surfer').css('top', '+=15');
-  // };
-
-  // function surferLeft() {
-  //   $('.surfer').css('left', '-=15');
-  // };
-
-  // function surferRight() {
-  //   $('.surfer').css('left', '+=15');
-  // };
-
-
+  function surferRight() {
+    surfer.css('left', '+=15');
+  }
 });
