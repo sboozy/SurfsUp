@@ -6,7 +6,6 @@ $(document).ready(function() {
 
   let timer = $('')
 
-
 setInterval(makeAndMoveTurtles, 4000);
 
 
@@ -30,7 +29,7 @@ setInterval(makeAndMoveTurtles, 4000);
 // console.log('made 1');
 
 
-  window.setInterval(detectCollision, 200);
+  window.setInterval(detectCollision, 100);
 
   function detectCollision() {
     let surferWidth, surferHeight, surferX, surferY,
@@ -51,6 +50,9 @@ setInterval(makeAndMoveTurtles, 4000);
          turtle.css("background", "red");
         }
   }
+
+  // let divHeight = $('.background-image').innerHeight();  //this is not working. Need to know
+  // console.log(divHeight);                                //height in order to limit surfer movement on Y
 
   $('body').keydown( function(event) {
       switch (event.which) {

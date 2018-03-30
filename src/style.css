@@ -1,18 +1,31 @@
-/*body {
-  background-image: url("../images/wave_bg.jpg");
-  background-size: 160% 900px;
+body {
+  /*position: relative;*/
+  overflow: hidden;
+
+}
+.background-image {
+  background-image: url("../images/wave_bg_test.jpg");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  animation-name: marquee;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
   background-repeat: repeat-x;
-  -webkit-animation: marquee 26s;    learned marquee example from codepen https://codepen.io/mikeyroy/pen/tlFiC
 }
 
-@-webkit-keyframes marquee {
+@keyframes marquee {
   0% {
     background-position: 0;
   }
   100% {
-    background-position: -1200px;
+    background-position: 10500px;
   }
-}*/
+}
 
 .surfer {
   height: 200px;
@@ -21,7 +34,6 @@
   position: absolute;
   margin-left: 20%;
   margin-top: 20%;
-
 }
 
 .turtle {
@@ -30,17 +42,24 @@
   background-color: green;
   position: absolute;
   /*margin-left: 50%;*/
-  margin-top: 15%;  /*limits how high my turtle can start*/
+  margin-top: 10%;  /*limits how high my turtle can start*/
   display: none;
   /*animation-name: turtlemove;*/
   animation-duration: 9s;
-  animation-timing-function: ease;
+  animation-timing-function: easeOutQuad;
   animation-fill-mode: forwards;  /*keeps div off the screen/doesn't reset)*/
 }
 
 @keyframes turtlemove {
   0% {right: 0;}
   100% {right: 2000px;}
+}
+
+.surfer-image {
+  position: relative;
+  top: -100%;
+  left: -150%;
+  height: 300%;
 }
 .timer {
   background-color: blue;
