@@ -1,13 +1,14 @@
 body {
   /*position: relative;*/
   overflow: hidden;
+  left: 0;
+  top: 0;
 
 }
 .background-image {
   background-image: url("../images/wave_bg_test.jpg");
   position: absolute;
-  left: 0;
-  top: 0;
+  background-position: 0;
   height: 100%;
   width: 100%;
   animation-name: marquee;
@@ -23,7 +24,7 @@ body {
     background-position: 0;
   }
   100% {
-    background-position: 10500px;
+    background-position: 12500px ;
   }
 }
 
@@ -41,10 +42,8 @@ body {
   width: 50px;
   background-color: green;
   position: absolute;
-  /*margin-left: 50%;*/
   margin-top: 10%;  /*limits how high my turtle can start*/
   display: none;
-  /*animation-name: turtlemove;*/
   animation-duration: 9s;
   animation-timing-function: easeOutQuad;
   animation-fill-mode: forwards;  /*keeps div off the screen/doesn't reset)*/
@@ -61,17 +60,23 @@ body {
   left: -150%;
   height: 300%;
 }
-.timer {
-  background-color: blue;
+.timer-div {
+  background-color: white;
   width: 10%;
   height: 10%;
+  border: 4px solid black;
   position: relative;
   text-align: center;
 
 }
-h2 {
-
+.timer {
+  width: auto;
+  height: auto;
+  font-size: 28px;
 }
-h3 {
 
+.red-turtle {
+  background-color: red;
 }
+
+
