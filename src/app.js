@@ -38,8 +38,8 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
                                        // collision detection stops working
 
     function randomTurtles() {
-      let y = Math.floor(Math.random() * (window.innerHeight - 120)); //adds random start location of turtles
-                                                                        //within size of window - height of turtle plus some
+      let y = Math.floor(Math.random() * (window.innerHeight)); //adds random start location of turtles
+                                                                //within size of window - height of turtle plus some
       turtlePositionArray.push(y);
   }
     function makeAndMoveTurtles() {
@@ -125,10 +125,10 @@ function scale() {
     alert("Sorry Bro! You may need to go back to surf school!\nHit reset to play again!")
   }
 }
-console.log("this is end game")
+
 function endGame() {
     $('.background-image').css('animation-play-state', 'paused');
-    //stop
+    //stops background when game is over
 }
 
 function playAgain() {

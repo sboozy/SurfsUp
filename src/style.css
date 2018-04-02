@@ -100,7 +100,7 @@ div.names {
   /*background-color: green;*/
   position: absolute;
   margin-top: 10%;  /*limits how high my turtle can start*/
-  margin-left: 0;
+  margin-bottom: 10%;
   padding: 0;
   display: none;
   animation-duration: 9s;

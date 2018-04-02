@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Surf's Up: Game</title>
+  <title>Surf's Up: Homepage</title>
   <link rel="stylesheet" type="text/css" href="src/style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <script src="src/app.js"></script>
+  <script></script>
 </head>
-<body class="index-body">
-<div class="background-image">
-  <div class="surfer">
-      <img class="surfer-image" src="images/surfer_girl.png">
-  </div>
-
-  <div class="turtle">
-  </div>
-  </div>
-
-  <div class="wrapper">
-    <div class="timer-div">
-      <p class ="timer">TIMER <span class="seconds">0</span></p>
+<body class="landing-body">
+<div class="landing-background">
+  <h1 class="heading">Surf's Up</h1>
+  <form class="form" action="">
+    <div class="name-container">
+      <div class="label-first-name names">
+        <label for="first-name"></label>
+        <input type="text" id="first-name" name="user_first_name" placeholder="First Name">
+      </div>
+      <div class="label-last-name names">
+        <label for="last-name"></label>
+        <input type="text" id="last-name" name="user_last_name" placeholder="Last Name">
+      </div>
     </div>
-
-    <div class="reset-button-div">
-      <button class="reset-button" type="button">RESET<br>GAME</button> <!-- broken button -->
+    <div>
+      <label for="mail"></label>
+      <input type="email" class="label-mail" name="user_email" placeholder="Email address">
     </div>
-  </div>
-
+    <div>
+      <button class="lets-go-button" type="button" onclick="location.href='game.html';">Let's Go!</button>
+    </div>
+  </form>
+</div>
 </body>
 </html>
