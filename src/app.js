@@ -1,6 +1,5 @@
 // eslint-env jquery
 $(document).ready(function() {
-
   let surfer = $('.surfer');
   let turtle = $('.turtle');  // maybe should delete this????
   let turtlePositionArray = [];
@@ -13,7 +12,6 @@ $(document).ready(function() {
     let surferWidth, surferHeight, surferX, surferY,
         turtleWidth, turtleHeight, turtleX, turtleY;
     let turtle = $('.background-image div:last-child');
-    // let collisionOffset = 30;
 
     surferWidth = surfer.outerWidth();  //Width, Height, X & Y check of surfer's position
     surferHeight = surfer.outerHeight();
@@ -26,20 +24,17 @@ $(document).ready(function() {
 
     if ((surferX + surferWidth) > (turtleX) && surferX < (turtleX + turtleWidth) &&
         (surferY + surferHeight) > (turtleY) && surferY <(turtleY + turtleHeight)) {
-      // turtle.css('background', 'red');
-         turtle.css('display', 'none');
-      // collisionOffset -= 1;
+      turtle.css('display', 'none');
       timePenaltyArray.push('hit'); //push to an array and access sum of array for Total Count
       }
   }
 
   //***********MAKE AND LAUNCH TURTLES****************
-setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
-                                       // collision detection stops working
-
+let turtleGenerator = setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
+                                                            // collision detection stops working
     function randomTurtles() {
       let y = Math.floor(Math.random() * (window.innerHeight)); //adds random start location of turtles
-                                                                //within size of window - height of turtle plus some
+                                                                //within height of window
       turtlePositionArray.push(y);
   }
     function makeAndMoveTurtles() {
@@ -54,7 +49,9 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
       turtlePositionArray = [];
     }
   }
-
+    function stopTurtles() {
+      clearInterval(turtleGenerator);    //function to stop making turtles later
+  }
 //****************KEYDOWN FUNCTION************************
   $('body').keydown( function(event) {
       switch (event.which) {
@@ -93,24 +90,33 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
     surfer.css('left', '+=15');
   }
 
-//****************TIMER THAT STOPS AT :25*****************
-  let timer = setInterval(startTimer, 1000);
-  let seconds = 0;
-  function startTimer() {
-    if (seconds < 20) {
-    $('.seconds').html(seconds += 1);
-  } else {
-    stopTimer();
-    // $('.background-image').css('animation-play-state', 'paused');
-    endGame();
-    seconds = $('.seconds').html();
-    scale();
-  }
+//****************TIMER THAT STOPS AT :20*****************
 
-  function stopTimer() {
-    clearInterval(timer);
-  }
-}
+
+      let timer = setInterval(startTimer, 1000);
+      let seconds = 0;
+      function startTimer() {
+        if (seconds < 20) {
+        $('.seconds').html(seconds += 1);
+      } else {
+        stopTimer();
+        endGame();
+        seconds = $('.seconds').html();
+        scale();
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+      }
+      function endGame() {
+      debugger;
+      $('.background-image').css('animation-play-state', 'paused');
+      stopTurtles();
+      }
+    }
+
+
+$('.lets-go-button').click(timer);  //tells timer to wait to start until Lets Go Button is clicked
 
 //*************SCALE TO SEE HOW WELL YOU DID*****************
 
@@ -126,15 +132,14 @@ function scale() {
   }
 }
 
-function endGame() {
-    $('.background-image').css('animation-play-state', 'paused');
-    //stops background when game is over
-}
 
-function playAgain() {
-  $('.reset-button').on("click", function() {
-    location.reload(true);   //broken button
-  });
-}
+
+
+
+// function playAgain() {
+//   $('.reset-button').on("click", function() {
+//     location.reload(true);   //broken button
+//   });
+// }
 
 });
