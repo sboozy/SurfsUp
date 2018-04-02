@@ -38,7 +38,8 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
                                        // collision detection stops working
 
     function randomTurtles() {
-      let y = Math.floor(Math.random() * (1 + 200)); //adds random start location of turtles
+      let y = Math.floor(Math.random() * (window.innerHeight - 120)); //adds random start location of turtles
+                                                                        //within size of window - height of turtle plus some
       turtlePositionArray.push(y);
   }
     function makeAndMoveTurtles() {
@@ -46,26 +47,24 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
     for (let i = 0; i < turtlePositionArray.length; i++) {
       let newTurtles = $('.background-image').append('<div class="turtle"></div>');
       $('.background-image div:last-child').css("top", turtlePositionArray[i]);
-       debugger;
-      $('.background-image div:last-child').css("right", -75); //starts turtle off screen
-      // $('.background-image div:last-child').css("display", "block");
+      $('.background-image div:last-child').css("right", -200); //starts turtle off screen
+      $('.background-image div:last-child').css("display", "block");
       $('.background-image div:last-child').css("animation-name", "turtlemove");
 
       turtlePositionArray = [];
     }
   }
-  // let divHeight = $('.background-image').innerHeight();  //this is not working. Need to know
-  // console.log(divHeight);                                //height in order to limit surfer movement on Y
+
 //****************KEYDOWN FUNCTION************************
   $('body').keydown( function(event) {
       switch (event.which) {
         case 38:
-        if (surfer.offset().top > 20) {
+        if (surfer.offset().top > 60) {
         surferUp();
       }
         break;
         case 40:
-        if (surfer.offset().top < (window.innerHeight - 250)) {
+        if (surfer.offset().top < (window.innerHeight - 250)) {  //size of window minus size of surfer
         surferDown();
       }
         break;
@@ -133,7 +132,7 @@ function endGame() {
 }
 
 function playAgain() {
-  $('button').on("click", function() {
+  $('.reset-button').on("click", function() {
     location.reload(true);   //broken button
   });
 }

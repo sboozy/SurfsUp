@@ -4,9 +4,6 @@
   background-size: cover;
   height: 400px;
 }
-.landing-background {
-
-}
 .heading {
   width: 300px;
   text-align: center;
@@ -87,25 +84,25 @@ div.names {
   }
 }
 .surfer {
-  height: 250px;
+  height: 300px;
   width: 100px;
-  background-color: orange;
+  /*background-color: orange;*/
   position: absolute;
-  top: 20%;
+  top: 35%;
   left: 20%;
 }
 
 .turtle {
   background-image: url("../images/turtle.png");
-  background-size: cover;
-  height: 60px;
-  width: 60px;
+  background-size: contain;
+  height: 70px;
+  width: 138px;
   /*background-color: green;*/
   position: absolute;
   margin-top: 10%;  /*limits how high my turtle can start*/
   margin-left: 0;
   padding: 0;
-  display: block;
+  display: none;
   animation-duration: 9s;
   animation-timing-function: easeOutQuad;
   animation-fill-mode: forwards;  /*keeps div off the screen/doesn't reset)*/
@@ -115,17 +112,11 @@ div.names {
   0% {right: 0;}
   100% {right: 2000px;}
 }
-/*.turtle-image {
-  background-image: url("../images/turtle.png");
-  background-size: 160px 160px;
-  height: 160px;
-  width: 160px;
-}*/
 .surfer-image {
   position: relative;
-  top: -120%;
-  left: -265%;
-  height: 300%;
+  top: -100%;
+  left: -300%;
+  height: 280%;
 }
 .timer-div {
   background-color: white;
