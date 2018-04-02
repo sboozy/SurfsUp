@@ -7,12 +7,31 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <script src="src/app.js"></script>
+  <script></script>
 </head>
-<body>
-<h1>Surf's Up</h1>
-
-
-
+<body class="landing-body">
+<div class="landing-background">
+  <h1 class="heading">Surf's Up</h1>
+  <form class="form" action="">
+    <div class="name-container">
+      <div class="label-first-name names">
+        <label for="first-name"></label>
+        <input type="text" id="first-name" name="user_first_name" placeholder="First Name">
+      </div>
+      <div class="label-last-name names">
+        <label for="last-name"></label>
+        <input type="text" id="last-name" name="user_last_name" placeholder="Last Name">
+      </div>
+    </div>
+    <div>
+      <label for="mail"></label>
+      <input type="email" class="label-mail" name="user_email" placeholder="Email address">
+    </div>
+    <div>
+      <button class="lets-go-button" type="button" onclick="location.href='/Users/sboozy/wdi/unit01/projects/rover-project1-boilerplate/index.html';">Let's Go!</button>
+    <!-- need to fix this to go to real game page and not just local -->
+    </div>
+  </form>
+</div>
 </body>
 </html>

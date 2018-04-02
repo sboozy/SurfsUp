@@ -26,7 +26,8 @@ $(document).ready(function() {
 
     if ((surferX + surferWidth) > (turtleX) && surferX < (turtleX + turtleWidth) &&
         (surferY + surferHeight) > (turtleY) && surferY <(turtleY + turtleHeight)) {
-      turtle.css('background', 'red');
+      // turtle.css('background', 'red');
+         turtle.css('display', 'none');
       // collisionOffset -= 1;
       timePenaltyArray.push('hit'); //push to an array and access sum of array for Total Count
       }
@@ -45,9 +46,11 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
     for (let i = 0; i < turtlePositionArray.length; i++) {
       let newTurtles = $('.background-image').append('<div class="turtle"></div>');
       $('.background-image div:last-child').css("top", turtlePositionArray[i]);
+       debugger;
       $('.background-image div:last-child').css("right", -75); //starts turtle off screen
-      $('.background-image div:last-child').css("display", "block");
+      // $('.background-image div:last-child').css("display", "block");
       $('.background-image div:last-child').css("animation-name", "turtlemove");
+
       turtlePositionArray = [];
     }
   }
@@ -56,9 +59,15 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
 //****************KEYDOWN FUNCTION************************
   $('body').keydown( function(event) {
       switch (event.which) {
-        case 38:surferUp();
+        case 38:
+        if (surfer.offset().top > 20) {
+        surferUp();
+      }
         break;
-        case 40:surferDown();
+        case 40:
+        if (surfer.offset().top < (window.innerHeight - 250)) {
+        surferDown();
+      }
         break;
         case 37:surferLeft();
         break;
@@ -89,7 +98,7 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
   let timer = setInterval(startTimer, 1000);
   let seconds = 0;
   function startTimer() {
-    if (seconds < 25) {
+    if (seconds < 20) {
     $('.seconds').html(seconds += 1);
   } else {
     stopTimer();
@@ -109,9 +118,9 @@ setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
 function scale() {
   let totalTime = parseInt(seconds) + (timePenaltyArray.length*5);
   console.log(totalTime);
-  if (totalTime === 25) {
+  if (totalTime === 20) {
     alert("Cowabunga Dude! You dodged all the turtles!\nHit reset to play again!");
-  } else if (totalTime > 25 && totalTime < 35) {
+  } else if (totalTime > 20 && totalTime < 30) {
     alert("Gnarly wave ride but you could totally do better!\nHit reset to play again!")
   } else {
     alert("Sorry Bro! You may need to go back to surf school!\nHit reset to play again!")
@@ -119,9 +128,14 @@ function scale() {
 }
 console.log("this is end game")
 function endGame() {
-  console.log("this is end game")
     $('.background-image').css('animation-play-state', 'paused');
     //stop
+}
+
+function playAgain() {
+  $('button').on("click", function() {
+    location.reload(true);   //broken button
+  });
 }
 
 });
