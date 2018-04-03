@@ -115,15 +115,39 @@ Time frames are also key in the development cycle.  You have limited time to cod
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
 
 | Function | Description | 
-| --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string | 
+| keydown | lets the arrows move a div |  
+| startTime | starts a timer that works on a interval and adds 1 sec to time, every 1 sec  | 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ Use this section to list all supporting libraries and their role in the project. 
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  
+```     //***********MAKE AND LAUNCH TURTLES****************
+  const turtleGenerator = setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
+                                                                // collision detection stops working
+    function randomTurtles() {
+      let y = Math.floor(Math.random() * (window.innerHeight - 200)); //adds random start location of turtles
+                                                                      //within height of window
+      turtlePositionArray.push(y);
+    }
+
+    function makeAndMoveTurtles() {
+    randomTurtles();
+    for (let i = 0; i < turtlePositionArray.length; i++) {
+      let newTurtles = $('.background-image').append('<div class="turtle"></div>');
+      $('.background-image div:last-child').css("top", turtlePositionArray[i]);
+      $('.background-image div:last-child').css("right", -200); //starts turtle off screen
+      $('.background-image div:last-child').css("display", "block");
+      $('.background-image div:last-child').css("animation-name", "turtlemove");
+
+      turtlePositionArray = [];
+    }
+  }
+    function stopTurtles() {
+      clearInterval(turtleGenerator);    //function to stop making turtles later
+  } ```
 
 ## jQuery Discoveries
  Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
