@@ -90,27 +90,26 @@ Include the full list of features that you are considering for POST MVP
 ## Functional Components  
 Based on the initial logic defined in the previous game phases section try and breakdown the logic further into functional components, and by that we mean functions.  Does your logic indicate that code could be encapsulated for the purpose of reusablility.  Once a function has been defined it can then be incorporated into a class as a method. 
   
-  -setInterval(); for moving background  
+  -setInterval(); for collision detection and making and moving turtles  
   -addEventListerners() or 'on' functions for keydown on arrows;
-  -2D collision detection https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
   -math.random(); for assigning coordinates to turtles
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Landing Page HTML/CSS| H | 4hrs| 0hrs | XXhrs |
-| Gaming Page HTML/CSS | H | 4hrs| 1hrs | XXhrs |
-| Logic for moving background  | H | 2hrs| 4hrs | XXhrs |
-| Logic for collision and visual indicator| H | 10hrs| 5hrs | XXhrs |
-| Logic for turtle display and location| H | 8hrs| 0hrs | XXhrs |
-| Logic for timing | H | 5hrs| 0hrs | XXhrs |
-| Logic for Game Over | H | 5hrs| 0hrs | XXhrs |
-| Logic for restart | H | 2hrs| 0hrs | XXhrs |
-| add landing page options | H | 6hrs| 0hrs | XXhrs |
-| Bonus - surfer shimmy | H | 2hrs| 0hrs | XXhrs |
-| Bonus - game over wave & logic | H | 6hrs| 0hrs | XXhrs |
-| Total |  | 48hrs| 0hrs | XXhrs |
+| Landing Page HTML/CSS| H | 4hrs| 3hrs | 3hrs |
+| Gaming Page HTML/CSS | H | 4hrs| 3hrs | 3hrs |
+| Logic for moving background  | H | 2hrs| 4hrs | 4hrs |
+| Logic for collision and visual indicator| H | 10hrs| 8hrs | 8hrs |
+| Logic for turtle display and location| H | 8hrs| 8hrs | 8hrs |
+| Logic for timing | H | 5hrs| 5hrs | 5hrs |
+| Logic for Game Over | H | 5hrs| 2hrs | 2hrs |
+| Logic for restart | H | 2hrs| 2hrs | 2hrs |
+| add landing page options | H | 6hrs| 0hrs | 0hrs |
+| Bonus - surfer shimmy | H | 2hrs| 0hrs | 0hrs |
+| Bonus - game over wave & logic | H | 6hrs| 0hrs | 0hrs |
+| Total |  | 48hrs| 70hrs | 70hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.

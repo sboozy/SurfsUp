@@ -131,3 +131,25 @@ function startGame() {
 }
 startGame();
 };
+
+// function landingFormFunction () {
+
+//   $('.submit-button').on('click', function(e) {
+//     e.preventDefault();
+//   })
+
+//   function populateStorage() {
+//     localStorage.setItem("firstName", "$('#first-name')");
+//   }
+
+//   function getStorage() {
+//     let firstName = localStorage.getItem('firstName');
+//   }
+
+
+//   lastName = localStorage.getItem($('#last-name'));
+//   email = localStorage.getItem($('.label-mail'));
+// }
+
+
+
