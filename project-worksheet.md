@@ -173,7 +173,6 @@ Use this section to include a brief code snippet of functionality that you are p
     function stopTurtles() {
       clearInterval(turtleGenerator);    //function to stop making turtles later
   } ```  
-
   
 ## jQuery Discoveries
  Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
