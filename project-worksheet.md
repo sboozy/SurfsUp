@@ -193,4 +193,7 @@ Use this section to include a brief code snippet of functionality that you are p
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**RESOLUTION**: Missing comma after first object in sources {} object  
+  
+  Also, I'm including a link to my google slide presentation bc I missed watching Homeland to do it so hopefully someone will look at it.
+https://docs.google.com/presentation/d/1TFQxLMdqc03b0C9a9_aioWYoTJwJouSziM8YdiOtfxE/edit?usp=sharing
