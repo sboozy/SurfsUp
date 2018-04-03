@@ -123,7 +123,32 @@ Helper functions should be generic enought that they can be reused in other appl
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description. 
+```//**********COLLISION DETECTION*******************
+  window.setInterval(detectCollision, 330);
+
+  function detectCollision() {
+    let surferWidth, surferHeight, surferX, surferY,
+        turtleWidth, turtleHeight, turtleX, turtleY;
+    let turtle = $('.background-image div:last-child');
+
+    surferWidth = surfer.outerWidth();  //Width, Height, X & Y check of surfer's position
+    surferHeight = surfer.outerHeight();
+    surferX = surfer.offset().left;
+    surferY = surfer.offset().top;
+    turtleWidth = turtle.outerWidth(); //Width, Height, X & Y check of turtle's position
+    turtleHeight = turtle.outerHeight();
+    turtleX = turtle.offset().left;
+    turtleY = turtle.offset().top;
+
+    if ((surferX + surferWidth) > (turtleX) && surferX < (turtleX + turtleWidth) &&
+        (surferY + surferHeight) > (turtleY) && surferY <(turtleY + turtleHeight)) {
+      turtle.css('display', 'none');
+      timePenaltyArray.push('hit'); //push to an array and access sum of array for Total Count
+      }
+    }
+```
+
 ```     //***********MAKE AND LAUNCH TURTLES****************
   const turtleGenerator = setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
                                                                 // collision detection stops working
@@ -147,16 +172,24 @@ Use this section to include a brief code snippet of functionality that you are p
   }
     function stopTurtles() {
       clearInterval(turtleGenerator);    //function to stop making turtles later
-  } ```
+  } ```  
 
+  
 ## jQuery Discoveries
  Use this section to list some, but not all, of the jQuery methods and\or functionality discovered while working on this project.
+ .offset()
+ .outerHeight()  
+ .outerWidth()    
+ .css()  
+ .html()  
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
-
+ Use this section to document what changes were made and the reasoning behind those changes.    
+- I moved the timer/reset to the top of the screen bc that was easier to style.
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
+
+ I had issues with all my game setInterval functions also starting on the landing page so I moved the Jquery document.ready() to each page and called one massive function that held all the functions needed for that page.   
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
