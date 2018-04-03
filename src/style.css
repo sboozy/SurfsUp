@@ -2,7 +2,9 @@
   margin: 180px;
   background-image: url("../images/beach_bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 400px;
+
 }
 .heading {
   width: 300px;
@@ -29,8 +31,8 @@
   font-size: 20px
 }
 div.names {
-  box-sizing: border-box;  /*need to research more*/
-  width: 50%;
+  box-sizing: border-box;  /*includes padding & border in width*/
+  width: 50%;              /*which is much easier to make true 50%*/
   float: left;
 }
 #first-name {
@@ -53,8 +55,17 @@ div.names {
 }
 .lets-go-button {
   display: block;
-  margin: auto;
-  font-size: 20px
+  margin-left: 40px;
+  font-size: 20px;
+}
+.submit-button {
+  display: block;
+  margin-left: 40px;
+  font-size: 20px;
+}
+.button-container {
+  display: flex;
+  margin: 0 auto;
 }
 .index-body {
   overflow: hidden;
@@ -99,8 +110,8 @@ div.names {
   width: 138px;
   /*background-color: green;*/
   position: absolute;
-  margin-top: 10%;  /*limits how high my turtle can start*/
-  margin-bottom: 10%;
+/*  margin-top: 10%;  limits how high my turtle can start
+  margin-bottom: 25%;*/
   padding: 0;
   display: none;
   animation-duration: 9s;

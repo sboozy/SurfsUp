@@ -5,7 +5,6 @@ function gamePageFunction() {
   let turtlePositionArray = [];
   let timePenaltyArray = [];
 
-
 //****************KEYDOWN FUNCTION************************
   $('body').keydown( function(event) {
       switch (event.which) {
@@ -45,7 +44,7 @@ function gamePageFunction() {
   }
 
 function startGame() {
-  console.log("i think this works");
+
   //**********COLLISION DETECTION*******************
   window.setInterval(detectCollision, 330);
 
@@ -74,8 +73,8 @@ function startGame() {
   const turtleGenerator = setInterval(makeAndMoveTurtles, 3000); // if less that 3 sec intervals then
                                                                 // collision detection stops working
     function randomTurtles() {
-      let y = Math.floor(Math.random() * (window.innerHeight)); //adds random start location of turtles
-                                                                //within height of window
+      let y = Math.floor(Math.random() * (window.innerHeight - 200)); //adds random start location of turtles
+                                                                      //within height of window
       turtlePositionArray.push(y);
     }
 

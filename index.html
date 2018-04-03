@@ -12,7 +12,9 @@
 <body class="landing-body">
 <div class="landing-background">
   <h1 class="heading">Surf's Up</h1>
-  <form class="form" action="">
+
+  <!-- TODO: make form submit and process data -->
+  <form class="form" action="/do-something-awesome">
     <div class="name-container">
       <div class="label-first-name names">
         <label for="first-name"></label>
@@ -27,8 +29,13 @@
       <label for="mail"></label>
       <input type="email" class="label-mail" name="user_email" placeholder="Email address">
     </div>
-    <div>
-      <button class="lets-go-button" type="button" onclick="location.href='game.html';">Let's Go!</button>
+    <div class="button-container">
+      <div>
+        <button class="submit-button" type="submit">Submit Info</button>
+      </div>
+      <div>
+        <button class="lets-go-button" type="button" onclick="location.href='game.html';">Let's Go!</button>
+      </div>
     </div>
   </form>
 </div>
