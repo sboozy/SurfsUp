@@ -196,4 +196,4 @@ Use this section to include a brief code snippet of functionality that you are p
 **RESOLUTION**: Missing comma after first object in sources {} object  
   
   Slide Presentation: 
-  ![](WDI_project_1.pdf)
+  https://docs.google.com/presentation/d/1TFQxLMdqc03b0C9a9_aioWYoTJwJouSziM8YdiOtfxE/edit?usp=sharing
